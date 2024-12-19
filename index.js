@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const PORT = 8000;
 
 // Import the JSON data with error handling
 let data;
@@ -16,5 +15,4 @@ app.get('/data/api', (req, res) => {
     res.json(data);
 });
 
-// Start the server
-app.listen(PORT, () => console.log(`Server started at PORT: ${PORT}`));
+module.exports = app;
